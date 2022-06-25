@@ -1,0 +1,36 @@
+GET http://localhost:4000
+
+###
+GET http://localhost:4000/admin
+
+###
+#SIGNUP ADMIN
+POST http://localhost:4000/admin/signup
+Content-Type: application/json
+
+{
+  "name": "saipepu",
+  "email": "saipepu.mdy257@gmail.com",
+  "password": "12345"
+}
+
+###
+#SIGNIN ADMIN
+POST http://localhost:4000/admin/signin
+Content-Type: application/json
+
+{
+  "name": "saipepu",
+  "email": "saipepu.mdy257@gmail.com",
+  "password": "12345"
+}
+
+###
+#AUTH ADMIN
+GET http://localhost:4000/admin/authRoute/62b5b419e1a230422f7f3246
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmI1YjQxOWUxYTIzMDQyMmY3ZjMyNDYiLCJpYXQiOjE2NTYxMzY4MzJ9.AndMtH-RyNsY1mvc6bj-neYGzF8etys6BGbnDHRjHVo
+
+###
+#SIGN OUT
+GET http://localhost:4000/admin/signout
